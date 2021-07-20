@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int x;
+
+int main()
+{
+    cin>>x;
+    while(x!=0)
+    {
+        ///PRELUCREAZA PE X
+        cin>>x;
+    }
+    return 0;
+}
