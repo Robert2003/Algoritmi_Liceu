@@ -9,7 +9,7 @@ int main()
     for(int i=1; i<=n; i++)
     {
         cin>>x;
-        ///Prelucreaza pe x
+        ///PRELUCREAZA PE X
     }
     return 0;
 }
