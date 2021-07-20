@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int n, c;
+
+int main()
+{
+    cin>>n;
+    do
+    {
+        c = n%10; ///DETERMINAM ULTIMA CIFRA
+        ///PRELUCREZ ULTIMA CIFRA
+        n/=10;
+    }while(n);
+    return 0;
+}
