@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int n, b, nb, p, R;
+
+int main()
+{
+    cin>>n>>b;
+    nb = 0;
+    p = 1;
+    while(n)
+    {
+        R = n%b;
+        nb = nb+p*R;
+        p = p*10;
+        n = n/b;
+    }
+    cout<<nb;
+}
