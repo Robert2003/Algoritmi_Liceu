@@ -1,0 +1,44 @@
+1) ALGORITMUL LUI EUCLID
+
+      #include <bits/stdc++.h>
+      using namespace std;
+
+      int a, b, R, cmmdc;
+
+      int main()
+      {
+          cin>>a>>b;
+          while(b)
+          {
+              R = a%b;
+              a = b;
+              b = R;
+          }
+          cmmdc = a;
+          cout<<cmmdc;
+          return 0;
+      }
+
+
+
+
+2)PRIN SCADERI SUCCESIVE
+
+      #include <bits/stdc++.h>
+      using namespace std;
+
+      int a, b, cmmdc;
+
+      int main()
+      {
+          cin>>a>>b;
+          while(a!=b)
+              if(a>b)
+              {
+                  a = a-b;
+                  b = b-a;
+              }
+          cmmdc = a;
+          cout<<cmmdc;
+          return 0;
+      }
