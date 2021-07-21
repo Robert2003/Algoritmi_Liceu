@@ -24,21 +24,21 @@
 
 2)PRIN SCADERI SUCCESIVE
 
-      #include <bits/stdc++.h>
-      using namespace std;
+            #include <bits/stdc++.h>
+            using namespace std;
 
-      int a, b, cmmdc;
+            int a, b, cmmdc;
 
-      int main()
-      {
-          cin>>a>>b;
-          while(a!=b)
-              if(a>b)
-              {
-                  a = a-b;
-                  b = b-a;
-              }
-          cmmdc = a;
-          cout<<cmmdc;
-          return 0;
-      }
+            int main()
+            {
+                cin>>a>>b;
+                while(a!=b)
+                    if(a>b)
+                    {
+                        a = a-b;
+                        b = b-a;
+                    }
+                cmmdc = a;
+                cout<<cmmdc;
+                return 0;
+            }
