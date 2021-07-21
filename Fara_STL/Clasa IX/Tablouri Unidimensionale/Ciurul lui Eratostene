@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int c[1000005];
+
+int main()
+{
+    c[0] = c[1] = 1; ///0 SI 1 NU SUNT PRIME
+    for(int i=2; i*i<=1000000; i++)
+        if(c[i] == 0)
+            for(int j=i*i; j<=1000000; j=j+i)
+                c[j] = 1; ///MULTIPLII LUI i NU VOR FI NUMERE PRIME
+    return 0;
+}
