@@ -1,0 +1,42 @@
+1) ALGORITM EFICIENT
+
+        #include <bits/stdc++.h>
+        using namespace std;
+
+        int n, S, dd;
+
+        int main()
+        {
+            cin>>n;
+            for(int d=1; d*d<=n; d++)
+                if(n%d == 0)
+                {
+                    S=S+d;
+                    dd = n/d;
+                    if(d!=dd)
+                        S=S+dd;
+                }
+            cout<<S;
+            return 0;
+        }
+        
+
+
+
+2) ALGORITM NEEFICIENT
+
+        #include <bits/stdc++.h>
+        using namespace std;
+
+        int n, S;
+
+        int main()
+        {
+            cin>>n;
+            for(int d=1; d<=n/2; d++)
+                if(n%d == 0)
+                    S+=d;
+            S+=n; /// DEOARECE NU AJUNGEM PANA LA "N" IN for()
+            cout<<S;
+            return 0;
+        }
