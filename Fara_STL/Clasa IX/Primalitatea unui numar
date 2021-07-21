@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int n, OK;
+
+int main()
+{
+    cin>>n;
+    OK = 1;
+    if(n<=1)
+        OK = 0;
+    for(int d=2; d*d<=n && OK; d++)
+        if(n%d == 0)
+            OK = 0;
+    if(OK == 1)
+        cout<<"Numarul este prim";
+    else
+        cout<<"Numarul nu este prim";
+    return 0;
+}
