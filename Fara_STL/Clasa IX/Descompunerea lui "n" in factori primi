@@ -20,5 +20,23 @@ int main()
         d++;
     }
     if(n!=1)
-        cout<<n<<' '<<1;
+        cout<<n<<'^'<<1;
 }
+
+
+
+REZULTATE IMPORTANTE ALE ALGORITMULUI DE DESCOMPUNERE IN FACTORI PRIMI
+
+        n = p1^k1*p2^k2*...*px^kx
+
+1) Numarul de divizori ai lui "n" este:
+
+    ND = (k1+1)*(k2+1)*...*(kx+1)
+    
+2) Numarul de numere prime cu "n" mai mici decat n este:
+
+    NP = n*(1-1/p1)*(1-1/p2)*...*(1-1/px)
+
+3) Numarul de perechi (a, b) care au cmmdc egal cu "n" este:
+
+    NParin = (2*k1+1)*(2*k2+1)*...*(2*kx+1)
