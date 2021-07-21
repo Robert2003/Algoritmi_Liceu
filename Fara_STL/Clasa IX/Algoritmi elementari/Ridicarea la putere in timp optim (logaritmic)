@@ -1,0 +1,33 @@
+Algoritmul lui Al-Kashi
+
+    a^n = a*a*a*a*...*a
+    
+          / (a*a)^n/2   //daca n este par 
+    a^n =
+          \ a*a^n-1     //daca n este impar
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int a, n;
+long long p;
+
+int main()
+{
+    cin>>a>>n; ///a^n
+    p=1;
+    while(n)
+    {
+        if(n%2==0)
+        {
+            a = a*a;
+            n = n/2;
+        }
+        else
+        {
+            p = p*a;
+            n--;
+        }
+    }
+    cout<<p;
+}
