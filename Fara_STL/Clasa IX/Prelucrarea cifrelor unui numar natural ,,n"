@@ -8,7 +8,7 @@ int main()
     cin>>n;
     do
     {
-        c = n%10; ///DETERMINAM ULTIMA CIFRA
+        c = n%10; ///DETERMIN ULTIMA CIFRA
         ///PRELUCREZ ULTIMA CIFRA
         n/=10;
     }while(n);
