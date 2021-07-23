@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int n, v[105], S[105], i, j;
+
+int main()
+{
+    cin>>n;
+    for(int i=1; i<=n; i++)
+        cin>>v[i];
+
+    ///SUMA PARTIALA
+    for(int i=1; i<=n; i++)
+        S[i] = S[i-1]+v[i];
+
+
+    /**AFISAREA SUMEI INTRE 2 POZITII.
+
+        EXEMPLU:
+                 1  2  3   4   5   6   7   8   9
+            v = {2, 5, 3,  7,  1,  4,  -1, 2,  6}
+            S = {2, 7, 10, 17, 18, 22, 21, 23, 29}
+
+            intre pozitia 3 si pozitia 8 suma este egala cu 16, adica S[8]-S[2]
+    */
+    cin>>i>>j;
+    cout<<S[j] - S[i-1];
+    return 0;
+}
