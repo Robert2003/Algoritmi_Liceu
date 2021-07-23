@@ -1,0 +1,47 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int n, x, li, ls, m, v[105];
+
+int main()
+{
+    cin>>n;
+    for(int i=1; i<=n; i++)
+        cin>>v[i];
+
+    cin>>x;
+    li=1; ls=n;
+    while(li<=ls)
+    {
+        m = (li+ls)/2;
+        if(x<=v[m])
+            ls = m-1;
+        else
+            li = m+1;
+    }
+    cout<<li; /**POZITIA LUI X, DACA X E IN VECTOR
+                 SAU CEL MAI MIC NUMAR MAI MARE DECAT X, DACA X NU ESTE IN VECTOR,
+                 ADICA NUMARUL CARE S-AR AFLA DUPA CEL CAUTAT DACA ACESTA AR FI IN VECTOR
+              */
+    return 0;
+}
+
+
+Exemplu 1:
+
+         1  2  3  4  5  6  7
+    v = {1, 2, 2, 3, 3, 5, 8}
+    n = 7
+    x = 3
+    
+      !!! li va fi 4, adica pozitia primului 3 in vector
+      
+      
+Exemplu 1:
+
+         1  2  3  4  5  6  7
+    v = {1, 2, 2, 5, 5, 6, 7}
+    n = 7
+    x = 3
+    
+      !!! li va fi 4, adica cel mai mic numar mai mare decat 3
