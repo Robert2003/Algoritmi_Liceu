@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int n, v[105], li, ls, m, OK, x;
+
+void CB(int x)
+{
+    li=1, ls = n;
+    OK = 0;
+    while(li<=ls && !OK)
+    {
+        m = (li+ls)/2;
+        if(x == v[m])
+        {
+            cout<<"DA"<<'\n';
+            OK = 1; ///L-AM GASIT PE X
+        }
+        else
+            if(x<v[m])
+                ls = n-1;
+            else
+                li = m+1;
+    }
+    if(!OK)
+        cout<<"NU"<<'\n';
+}
+
+int main()
+{
+    cin>>n;
+    for(int i=1; i<=n; i++)
+        cin>>v[i];
+    cin>>x;
+    CB(x);
+    return 0;
+}
