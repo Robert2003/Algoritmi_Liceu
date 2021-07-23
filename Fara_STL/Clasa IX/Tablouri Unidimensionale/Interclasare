@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int n, m, A[105], B[105], C[210], i, j, k;
+
+void interclasare()
+{
+    i=1; j=1; k=0;
+    ///ETAPA 1
+    while(i<=n && j<=m)
+        if(A[i]<B[j])
+            C[++k] = A[i++];
+        else
+            if(A[i]>B[j])
+                C[++k] = B[j++];
+            else
+            {
+                C[++k] = A[i++];
+                j++;
+            }
+    ///ETAPA 2 - IN CAZ CA MAI AVEM ELEMENTE RAMASE IN VECTORI
+    for(int t=i; t<=n; t++)
+        C[++k] = A[t];
+    for(int t=j; t<=m; t++)
+        C[++k] = B[t];
+}
+
+int main()
+{
+    cin>>n;
+    for(int i=1; i<=n; i++)
+        cin>>A[i];
+    cin>>m;
+    for(int i=1; i<=m; i++)
+        cin>>B[i];
+    interclasare();
+    for(int i=1; i<=k; i++)
+        cout<<C[i]<<' ';
+    return 0;
+}
