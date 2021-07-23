@@ -44,7 +44,8 @@ In loc de divizor = i, daca vrem suma punem s = s+i.
                     for(int j=i; j<=1000000; j+=i)
                     {
                         v[j]++;
-                        if(v[j]==numar[j])s+=i;
+                        if(v[j]==numar[j])
+                                s+=i;
                     }
             fout<<s;
             return 0;
