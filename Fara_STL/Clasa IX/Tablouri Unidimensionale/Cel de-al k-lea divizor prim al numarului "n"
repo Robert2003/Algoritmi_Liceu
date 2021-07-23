@@ -1,0 +1,51 @@
+Citesti numarul "n" si numaruk "k" reprezentand divizorul pe care trebuie sa il gasesti.
+Pe pozitia n in vectorul numar[n] il pui pe k.
+Adaptam sirul lui Eratostene astfel:
+
+        #include <bits/stdc++.h>
+        using namespace std;
+
+        int n, k, divizor, v[1000005], numar[1000005];
+
+        int main()
+        {
+            cin>>n>>k;
+            numar[n] = k;
+            for(int i=2; i<=1000000; i++)
+                if(v[i] == 0)
+                    for(int j=i; j<=1000000; j=j+i)
+                    {
+                        v[j]++;
+                        if(v[j] == numar[j])
+                            divizor = i;
+                    }
+            cout<<divizor;
+            return 0;
+        }
+
+
+Se poate si pentru n numere. Se citesc n numere si k-urile se pun in numar[n].
+In loc de divizor = i, daca vrem suma punem s = s+i.
+
+        #include <bits/stdc++.h>
+        using namespace std;
+        int n, k, numar[1000001], v[1000001], x, p;
+        long long s;
+        int main()
+        {
+            fin>>p>>n;
+            for(int i=1; i<=n; i++)
+            {
+                fin>>x>>k;
+                numar[x]=k;
+            }
+            for(int i=2; i<=1000000; i++)
+                if(v[i]==0)
+                    for(int j=i; j<=1000000; j+=i)
+                    {
+                        v[j]++;
+                        if(v[j]==numar[j])s+=i;
+                    }
+            fout<<s;
+            return 0;
+        }
