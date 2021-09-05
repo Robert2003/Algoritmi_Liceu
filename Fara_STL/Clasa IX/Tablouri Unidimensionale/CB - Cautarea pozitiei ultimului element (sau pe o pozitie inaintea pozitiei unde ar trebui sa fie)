@@ -25,3 +25,22 @@ int main()
               */
     return 0;
 }
+
+Exemplu 1:
+
+         1  2  3  4  5  6  7
+    v = {1, 2, 2, 3, 3, 5, 8}
+    n = 7
+    x = 3
+    
+      !!! ls va fi 5, adica pozitia ultimului 3 in vector
+      
+      
+Exemplu 1:
+
+         1  2  3  4  5  6  7
+    v = {1, 2, 2, 5, 5, 6, 7}
+    n = 7
+    x = 3
+    
+      !!! ls va fi 3, adica cel mai mare numar mai mic decat 3
