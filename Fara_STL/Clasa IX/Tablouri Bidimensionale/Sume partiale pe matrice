@@ -1,0 +1,49 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int n, m, x1, x2, y1, y2;
+int mat[101][101];
+
+int main()
+{
+    cin>>n>>m;
+    for(int i=1; i<=n; i++)
+        for(int j=1; j<=m; j++)
+            cin>>mat[i][j];
+
+    for(int i=1; i<=n; i++)
+        for(int j=1; j<=m; j++)
+            mat[i][j] = mat[i][j] + mat[i-1][j] + mat[i][j-1] - mat[i-1][j-1];
+
+            for(int i=1; i<=m; i++)
+    {
+        for(int j=1; j<=n; j++)
+            cout<<mat[j][i]<<' ';
+        cout<<'\n';
+    }
+
+    cin>>x1>>y1>>x2>>y2;
+
+    cout<<mat[x2][y2] - mat[x2][y1-1] - mat[x1-1][y2] + mat[x1-1][y1-1];
+    ///CA SA AFISEZ SUMA INTRE 2 COORDONATE TREBUIE CA DIN SUMA PANA IN [x2][y2] SA SCAD DREPTUNGHIUL DIN STANGA ZONEI PE CARE O VREAU
+    ///APOI SA SCAD DREPTUNGHIUL DEASUPRA ZONEI PE CARE O VREAU SI SA ADUN CE E COMUN SI SCAD DE 2 ORI
+
+    /**
+    Exemplu:
+
+
+           y1  y2
+        |1| 2 3 4| 5
+     x1 |2 |3 4 5| 6
+        |3 |4 5 6| 7
+     x2 |4 |5 6 7| 8
+         5  6 7 8  9
+
+    x1 = 2, y1 = 2
+    x2 = 4, y2 = 4
+
+    Din suma care e pana in [x2][y2] scad coloana din stanga zonei mele, scad linia deasupra zonei mele si adun ce e pe diagonala sus-stanga
+    */
+
+    return 0;
+}
