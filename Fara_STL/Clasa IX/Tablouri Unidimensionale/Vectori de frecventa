@@ -1,0 +1,17 @@
+In unele probleme avem nevoie sa stim de cate ori apare un numar intr-un sir, astfel:
+
+#include <bits/stdc++.h>
+using namespace std;
+int n, x, numar, ap[105];
+int main()
+{
+    cin>>n;
+    for(int i=1; i<=n; i++)
+    {
+        cin>>x;
+        ap[x]++; ///IN ap[x] STOCAM NUMARUL DE APARITII AL UNUI NUMAR
+    }
+    cin>>numar;
+    cout<<ap[numar];
+    return 0;
+}
