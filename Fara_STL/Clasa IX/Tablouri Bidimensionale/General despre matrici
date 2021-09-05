@@ -1,1 +1,75 @@
+#include <bits/stdc++.h>
+using namespace std;
 
+int n, m;
+
+///DECLARAREA
+int mat[101][101];
+
+int main()
+{
+    ///CITIREA ELEMENTELOR
+    cin>>n>>m;
+    for(int i=1; i<=n; i++)
+        for(int j=1; j<=m; j++)
+            cin>>mat[i][j];
+
+    ///AFISARE NORMALA
+    for(int i=1; i<=n; i++)
+    {
+        for(int j=1; j<=m; j++)
+            cout<<mat[i][j]<<' ';
+        cout<<'\n';
+    }
+    
+    ///AFISARE PE COLOANE
+    for(int i=1; i<=m; i++)
+    {
+        for(int j=1; j<=n; j++)
+            cout<<mat[j][i]<<' ';
+        cout<<'\n';
+    }
+    
+    ///CONDITIA CA UN ELEMENT SA FIE PE DIAGONALA PRINCIPALA ESTE i==j
+    ///DECI DACA j<i INSEAMNA CA ESTE DEASUPRA DIAGONALEI PRINCIPALE
+    ///SI DACA j>i, ADICA DACA j PLEACA DE LA i+1 -j=i+1- INSEAMNA CA ESTE SUB DIAGONALA PRINCIPALA
+
+    ///AFISARE DEASUPRA DE DIAGONALA PRINCIPALA
+    for(int i=1; i<=n; i++)
+    {
+        for(int j=i+1; j<=m; j++)
+            cout<<mat[i][j]<<' ';
+        cout<<'\n';
+    }
+    
+    ///AFISARE SUB DIAGONALA PRINCIPALA
+    for(int i=1; i<=n; i++)
+    {
+        for(int j=1; j<i; j++)
+            cout<<mat[i][j]<<' ';
+        cout<<'\n';
+    }
+
+    
+    ///CONDITIA CA UN ELEMENT SA FIE PE DIAGONALA SECUNDARA ESTE i+j==n+1
+    ///DECI DACA j<n-i+1 INSEAMNA CA ESTE DEASUPRA DIAGONALEI SECUNDARE
+    ///SI DACA j>n-i+1, ADICA DACA j PLEACA DE LA n-i+2 -j=n-i+2- INSEAMNA CA ESTE SUB DIAGONALA SECUNDARA
+
+    ///AFISARE DEASUPRA DE DIAGONALA SECUNDARA
+    for(int i=1; i<=n; i++)
+    {
+        for(int j=1; j<n-i+1; j++)
+            cout<<mat[i][j]<<' ';
+        cout<<'\n';
+    }
+    
+    ///AFISARE SUB DIAGONALA SECUNDARA
+    for(int i=1; i<=n; i++)
+    {
+        for(int j=n-i+2; j<=m; j++)
+            cout<<mat[i][j]<<' ';
+        cout<<'\n';
+    }
+
+    return 0;
+}
