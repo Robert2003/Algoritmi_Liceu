@@ -19,7 +19,7 @@ int main()
         else
             li = m+1;
     }
-    cout<<li; /**POZITIA LUI X, DACA X E IN VECTOR
+    cout<<li; /**PRIMA POZITIE A LUI X, DACA X E IN VECTOR
                  SAU CEL MAI MIC NUMAR MAI MARE DECAT X, DACA X NU ESTE IN VECTOR,
                  ADICA NUMARUL CARE S-AR AFLA DUPA CEL CAUTAT DACA ACESTA AR FI IN VECTOR
               */
