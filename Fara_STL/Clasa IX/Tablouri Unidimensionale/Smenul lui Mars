@@ -1,4 +1,5 @@
-Să presupunem că avem un vector A[] cu n elemente, indexate de la 1 la n, inițial nule, în care se fac mai multe operații Adună(s,d,X) prin care toate elementele din secvența delimitată de indicii s d cresc cu valoarea X. Se cere afișarea elementelor din A după efectuarea acestor operații.
+Să presupunem că avem un vector A[] cu n elemente, indexate de la 1 la n, inițial nule, în care se fac mai multe operații Adună(s,d,X) prin care toate elementele din secvența 
+delimitată de indicii s d cresc cu valoarea X. Se cere afișarea elementelor din A după efectuarea acestor operații.
 
 #include <bits/stdc++.h>
 using namespace std;
